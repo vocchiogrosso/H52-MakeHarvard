@@ -1,0 +1,235 @@
+* {
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+body {
+   max-width: 100vw;
+}
+
+    /*| Change Link Hover/Active/Visited */
+    .navBarItem:hover {
+        background-color: lightcyan;
+    }
+
+    .navBarItem:active {
+        background-color: lightblue;
+    }
+
+    .navBarItem:visited {
+        background-color: slategray;
+    }
+
+    
+
+.NavigationBar {
+    height: 15vh;
+    position: absolute;
+    left: 0%;
+    width: 100vw;
+}
+
+.LandingScreen {
+    border-top: 1px solid black;
+    height: 85vh;
+    position: absolute;
+    left: 0%;
+    width: 100vw;
+}
+
+.Screen {
+   height: 100vh;
+   position: absolute;
+   left: 0%;
+   width: 100vw;
+}
+
+.DoubleScreen {
+    height: 200vh;
+    position: absolute;
+    left: 0%;
+    width: 100vw;
+}
+
+    #Video {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width:100%;
+        height:140%;
+        border: none;
+        overflow: hidden;
+    }
+
+
+    .FortyBox {
+        height: 40vh;
+        position: absolute;
+        width: 60vw;
+        text-align: center;
+    }
+
+        #M1 {
+            background-color: black;
+            opacity: 0.5;
+            border-radius: 5px;
+            box-shadow: 15px 15px 30px 0px rgba(0,0,0,0.75);
+            border: 1px solid black;
+            margin:0;
+            padding:5px;
+            top: 20vh;
+            left: 20vw;
+        }
+
+            #M1 h1 {
+                color: white;
+                font-size: 9vh;
+                opacity: 1;
+            } 
+
+            #M1 h3 {
+                color: white;
+                font-size: 3.5vh;
+                letter-spacing: 0.05em;
+                opacity: 1;
+            }
+
+            /*
+            .democontainer {
+                border: 1px solid black;
+                width: 80%;
+                height: 60%;
+                position: absolute;
+                top: 30%;
+                left: 10%;
+            }
+            */
+
+
+
+/* Customizations Below */
+
+#screenSettingsA {
+    background-repeat: none;
+    top: 15%;
+}
+
+    #NavBar {
+        background-color: rgb(101, 162, 223);
+        top: 0%;
+    }
+
+    #navPanel {
+        background-color: none;
+        height: 100%;
+        left: 0%;
+        position: absolute;
+        width: 100%;
+    }
+
+        .navBarItem {
+            font-size: 1.75vw;
+            font-weight: 400;
+            height: 100%;
+            position: absolute;
+            top: 0%;
+            width: 20%;
+            text-align: center;
+        }
+
+            .navBarItem h3 {
+                text-align: center;
+            }
+
+            #NB1 {left:0%;}
+            #NB2 {left:20%;}
+            #NB3 {left:40%;}
+            #NB4 {left:60%;}
+            #NB5 {left:80%;}
+
+#screenSettingsB {
+    background-color: lightslategray;
+    border: 1px solid black;
+    top: 100%;
+}
+
+#screenSettingsC {
+    background-color: rgb(117, 117, 201);
+    top: 200%;
+}
+
+#screenSettingsD {
+    background-color: lightskyblue;
+    top: 300%;
+}
+
+#screenSettingsE {
+    background-color: rgb(226, 197, 34);
+    top: 300%;
+}
+
+/*| Demo |*/
+
+
+.button-4 {
+    background-color: lightgray;
+    border-left:1px solid black;
+    border-top: 1px solid black;
+    height:15vh;
+    position: absolute;
+    width:20vw;
+    text-align: center;
+}
+    #B1:hover {background-color: lightblue;}
+    #B2:hover {background-color: yellow;}
+    #B3:hover {background-color: lightgreen;}
+    #B4:hover {background-color: red;}
+
+    .button-4 h3 {
+        font-size: 2vw;
+    }
+
+#B1 {
+    left: 10vw;
+    top: 10vh;
+}
+
+#B2 {
+    left: 30vw;
+    top: 10vh;
+}
+
+#B3 {
+    left: 50vw;
+    top: 10vh;
+}
+
+#B4 {
+    border-right: 1px solid black;
+    left: 70vw;
+    top: 10vh;
+}
+
+
+    #Demo {
+        background-color: white;
+        border: 1px solid black;
+        height: 65vh;
+        position: absolute;
+        top: 25vh;
+        left: 10vw;
+        width: 80vw;
+    }
+
+        #my_camera {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+        }
+
+        #results {
+            position: absolute;
+            top: 10%;
+            left: 60%;
+        }

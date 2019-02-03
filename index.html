@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Ultradrone</title>
+    <link rel="Stylesheet" media="screen" type="text/css" href="index.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script></script>
+</head>
+<body>
+    <div class="NavigationBar" id="NavBar">
+        <div id="navPanel">
+            <a href="#screenSettingsA"><div id="NB1" class="navBarItem"><h3>Home</h3></div></a>
+            <a href="#screenSettingsB"><div id="NB2" class="navBarItem"><h3>About</h3></div></a>
+            <a href="#screenSettingsC"><div id="NB3" class="navBarItem"><h3>Demo</h3></div></a>
+            <a href="#screenSettingsD"><div id="NB4" class="navBarItem"><h3>Contact</h3></div></a>
+            <a href="#screenSettingsE"><div id="NB5" class="navBarItem"><h3>More</h3></div></a>
+        </div>
+    </div>
+    <div class="LandingScreen" id="screenSettingsA">
+        <iframe id="Video" src="Landing.mp4" loop="true" controls="false">
+        </iframe>
+        <div class="FortyBox" id="M1">
+            <h1>Introducing the Ultradrone</h1>
+            <h3>Your All-in One Modular Drone Platform</h3>
+        </div>
+        
+    </div>
+    <div class="Screen" id="screenSettingsB">
+    
+    </div>
+    <div class="Screen" id="screenSettingsC">
+        <a href="#screenSettingsC" onclick="take_snapshot();document.getElementById('B1').disabled = true;"><div class="button-4" id="B1"><h3>Take Photo</h3></div></a>
+        <a href="#screenSettingsC"><div class="button-4" id="B2"><h3>Retake Photo</h3></div></a>
+        <a href="#screenSettingsC"><div class="button-4" id="B3"><h3>Submit</h3></div></a>
+        <a href="#screenSettingsC"><div class="button-4" id="B4"><h3>Cancel</h3></div></a>
+        <div class="demo" id="Demo">
+                <div id="my_camera">Your Current Camera View Will Apear Here...</div>
+                <div id="results">Your captured image will appear here...</div>
+                <!-- First, include the Webcam.js JavaScript Library -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
+                
+                <!-- Configure a few settings and attach camera -->
+                <script language="JavaScript">
+                    var Webcam;
+                    Webcam.set({
+                        width: 400,
+                        height: 300,
+                        dest_width: 400,
+                        dest_height: 300,
+                        image_format: 'jpg',
+                        jpeg_quality: 100
+                    });
+                    Webcam.attach( '#my_camera' );
+                </script>
+                
+                <!-- Code to handle taking the snapshot and displaying it locally -->
+                <script language="JavaScript">
+                    function take_snapshot() {
+                        // take snapshot and get image data
+                        Webcam.snap( function(data_uri) {
+                            // display results in page
+                            document.getElementById('results').innerHTML = 
+                                '<h2>Here is your image:</h2>' + 
+                                '<img src="'+data_uri+'"/>';
+                        } );
+                    }
+                </script>
+
+        </div>
+    </div>
+    <div class="Screen" id="screenSettingsD">
+                
+    </div>
+    <div class="Screen" id="screenSettingsE">
+                
+    </div>
+</body>
