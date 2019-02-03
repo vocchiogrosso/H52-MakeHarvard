@@ -23,5 +23,5 @@ function take_snapshot() {
 }
 
 function submit(){
-   
+   alert("Your Data Has Been Submitted");
 }
