@@ -28,32 +28,41 @@
         
     </div>
     <div class="Screen" id="screenSettingsB">
-    
+     <div class="split"id="left">
+      <div id="Top">
+      <h1>About</h1>
+      <h2>Ultradrone is a Modular Drone that has built in componets that allows it to be useful in a variety of stituations.</h2>
+      <h2>What we've done is build a drone from scrath that can support integrating modular componenets underneath the central platoform of the drone.</h2>
+      <img src="photo1.jpg"> 
+      </div>
+     </div>
+     <div class="split" id="right">
+      <img src="photo2.jpg">
+      <div id="Bottom">
+      <h1>How It Works</h1>
+      <h2>One application of the Ultradrone is in the use of a Security Drone.</h2>
+      <h3>Ultradrone's modular capability allows us to add componenets and integrate into it's existing platform.</h3>
+      <h3>For example you would connect your camera to the onboard ardunio and remotely run your code</h3>
+      <h3></h3>
+      <h3></h3>
+      <h3></h3>
+      </div>
+     </div>
     </div>
     <div class="Screen" id="screenSettingsC">
-        <a href="#screenSettingsC" onclick="take_snapshot();document.getElementById('B1').disabled = true;"><div class="button-4" id="B1"><h3>Take Photo</h3></div></a>
-        <a href="#screenSettingsC"><div class="button-4" id="B2"><h3>Retake Photo</h3></div></a>
-        <a href="#screenSettingsC"><div class="button-4" id="B3"><h3>Submit</h3></div></a>
-        <a href="#screenSettingsC"><div class="button-4" id="B4"><h3>Cancel</h3></div></a>
+        <a href="#screenSettingsC" onclick="set_camera()"><div class="button-4" id="B1"><h3>Enable Camera</h3></div></a>
+        <a href="#screenSettingsC" onclick="take_snapshot();"><div class="button-4" id="B2"><h3>Take Photo</h3></div></a>
+        <a href="#screenSettingsC" onclick="submit()"><div class="button-4" id="B3"><h3>Submit</h3></div></a>
+        <a href="#screenSettingsC" onclick="window.location.reload('#screenSettingsC')"><div class="button-4" id="B4"><h3>Cancel</h3></div></a>
         <div class="demo" id="Demo">
-                <div id="my_camera">Your Current Camera View Will Apear Here...</div>
+                
+                <div id="my_camera">Your Camera Must Be Enabled To Use This!</div>
                 <div id="results">Your captured image will appear here...</div>
                 <!-- First, include the Webcam.js JavaScript Library -->
                 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
                 
                 <!-- Configure a few settings and attach camera -->
-                <script language="JavaScript">
-                    var Webcam;
-                    Webcam.set({
-                        width: 400,
-                        height: 300,
-                        dest_width: 400,
-                        dest_height: 300,
-                        image_format: 'jpg',
-                        jpeg_quality: 100
-                    });
-                    Webcam.attach( '#my_camera' );
-                </script>
+                
                 
                 <!-- Code to handle taking the snapshot and displaying it locally -->
                 <script language="JavaScript">
@@ -62,18 +71,21 @@
                         Webcam.snap( function(data_uri) {
                             // display results in page
                             document.getElementById('results').innerHTML = 
-                                '<h2>Here is your image:</h2>' + 
                                 '<img src="'+data_uri+'"/>';
                         } );
                     }
                 </script>
+                <div id="Details">
+                <form action="POST" name="theForm">
+                    <input id="Q1" type="text" placeholder="Your First Name"/><br>
+                    <input id="Q2" type="text" placeholder="Your Last Name"/><br>
+                    <input id="Q3" type="email" placeholder="Your Email"/>
+                </form>
+                </div>
 
         </div>
     </div>
     <div class="Screen" id="screenSettingsD">
-                
-    </div>
-    <div class="Screen" id="screenSettingsE">
                 
     </div>
 </body>
